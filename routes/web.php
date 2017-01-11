@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('user/{id}', 'UserController@show');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
+Route::resource('photos', 'PhotoController');

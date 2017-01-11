@@ -8,17 +8,20 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-     /**
+
+     /*
      * Show a list of all of the application's users.
      *
      * @return Response
      */
+     /*
     public function index()
     {
-        $users = DB::select('select * from users where active = ?', [1]);
+        //$users = DB::select('select * from users where active = ?', [1]);
 
-        return view('user.index', ['users' => $users]);
+        //return view('user.index', ['users' => $users]);
     }
+    */
 
     /**
      * Show the profile for the given user.
@@ -30,10 +33,13 @@ class UserController extends Controller
     {
         //$results = DB::select('select * from users where id = :id', ['id' => 1]);
         return view('user.profile', ['user' => User::findOrFail($id)]);
+        
     }
 
+    /*
     public function insert()
     {
         DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
     }
+    */
 }
