@@ -11,7 +11,7 @@
 
 <!-- Styles -->
 <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/app.css">
+<link rel="stylesheet" href="/public/css/app.css">
 
 <!-- Scripts -->
 <script>
@@ -30,7 +30,8 @@
 </div>
 
 <!-- Inline Scripts -->
-<script data-main="/js/app.js" src="/bower_components/requirejs/require.js"></script>
+<script src="/public/js/lib/dash.all.min.js"></script>
+<script data-main="/public/js/app.js" src="/bower_components/requirejs/require.js"></script>
 
 </body>
 </html>

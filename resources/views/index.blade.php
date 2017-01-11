@@ -6,6 +6,6 @@
 
 @section('content')
 
-    @include('partials.player')
+    @include('partials.playermsdn')
     
 @endsection
