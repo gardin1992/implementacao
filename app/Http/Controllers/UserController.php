@@ -3,25 +3,22 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-
-     /*
-     * Show a list of all of the application's users.
+    /**
+     * Create a new controller instance.
      *
-     * @return Response
+     * @param  UserRepository  $users
+     * @return void
      */
-     /*
-    public function index()
+    public function __construct(UserRepository $users)
     {
-        //$users = DB::select('select * from users where active = ?', [1]);
-
-        //return view('user.index', ['users' => $users]);
+        $this->users = $users;
     }
-    */
 
     /**
      * Show the profile for the given user.
@@ -33,13 +30,33 @@ class UserController extends Controller
     {
         //$results = DB::select('select * from users where id = :id', ['id' => 1]);
         return view('user.profile', ['user' => User::findOrFail($id)]);
-        
+
     }
 
-    /*
-    public function insert()
+    /**
+     * Update the given user.
+     *
+     * @param  Request  $request
+     * @param  string  $id
+     * @return Response
+     */
+    public function update(Request $request, $id)
     {
-        DB::insert('insert into users (id, name) values (?, ?)', [1, 'Dayle']);
+        //
     }
-    */
+
+    /**
+     * Store a new user.
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $name = $request->name;
+
+        //
+    }
+    
+
 }

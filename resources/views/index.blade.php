@@ -1,15 +1,11 @@
 <!-- Stored in resources/views/child.blade.php -->
 
-@extends('templates.layout-index')
+@extends('layouts.home')
 
-@section('title', 'Page Title')
-
-@section('sidebar')
-    @parent
-
-    <p>This is appended to the master sidebar.</p>
-@endsection
+@section('title', 'Home')
 
 @section('content')
-    <p>This is my body content.</p>
+
+    @include('partials.player')
+    
 @endsection
