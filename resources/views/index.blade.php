@@ -6,6 +6,12 @@
 
 @section('content')
 
+    @foreach ($files as $file)
+        <ul>
+            <li data-url="{{ $file['url'] }}">{{ $file['name'] }}</li>
+        </ul>
+    @endforeach
+
     @include('partials.playermsdn')
     
 @endsection
