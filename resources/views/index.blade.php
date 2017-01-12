@@ -6,12 +6,19 @@
 
 @section('content')
 
-    @foreach ($files as $file)
-        <ul>
-            <li data-url="{{ $file['url'] }}">{{ $file['name'] }}</li>
-        </ul>
-    @endforeach
+    <div class="col-sm-2">
 
-    @include('partials.playermsdn')
-    
+        <ul id="fileList">
+
+            @foreach ($files as $file)
+                <li data-url="{{ $file['url'] }}">{{ $file['name'] }}</li>
+            @endforeach
+        </ul>
+
+    </div>
+
+    <div class="col-sm-8">
+        @include('partials/4mpbox')
+    </div>
+
 @endsection

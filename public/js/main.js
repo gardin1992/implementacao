@@ -1,9 +1,5 @@
-define(["jquery", "bootstrap", "home"], function ($, bootstrap, home) {
+define(["jquery", "bootstrap"], function ($, bootstrap) {
 
-	$(function () {
-	
-		home.init();
-    	
-	});
+	console.log('initialize');
 
 });

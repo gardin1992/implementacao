@@ -1,16 +1,4 @@
 <div>
-    <!-- GitHub Fork Me Ribbon -->
-    <a href="https://github.com/gpac/mp4box.js"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub" ></a>
-    <!-- GitHub Stat Buttons -->
-    <div style="position: absolute; top: 10px; right: 150px; border: 0;" >
-        <a class="github-button" href="https://github.com/gpac/mp4box.js" data-style="mega" data-count-href="/gpac/mp4box.js/stargazers" data-count-api="/repos/gpac/mp4box.js#stargazers_count">Star</a>
-        <a class="github-button" href="https://github.com/gpac/mp4box.js/fork" data-style="mega" data-count-href="/gpac/mp4box.js/network" data-count-api="/repos/gpac/mp4box.js#forks_count">Fork</a>
-        <a class="github-button" href="https://github.com/gpac/mp4box.js" data-style="mega" data-count-href="/gpac/mp4box.js/watchers" data-count-api="/repos/gpac/mp4box.js#subscribers_count">Watch</a>
-        <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-    </div>
-
-    <h3>MP4Box.js / Playing any MP4 in your browser (see also <a href="filereader.html">File Analyzer</a>)</h3>
-
     <div style="position: relative; width: 50%; height: 50%">
         <video id="v" autoplay controls poster="http://gpac.wp.mines-telecom.fr/files/2014/01/FondBig_1600x230.png"> </video>
         <div id="overlayTracks" style="position: absolute; top: 0px; width: 100%; height: 95%;">
@@ -150,37 +138,6 @@
             </ul>
             <h3>Feedback</h3>
             <p>To get the code of this demo, or to send patchs or feedback, check out the <a href="https://github.com/gpac/mp4box.js">Git Hub Repository</a>.</p>
-        </div>
-    </div>
-</div>
-
-
-<div id="grid" class="col-sm-12">
-    <div id="col1">
-        <label>Enter .mpd file:
-            <input type="text" id="filename" value="uploads/catepillar.mp4" />
-        </label> <button id="load">Play</button><br />
-
-        <!-- some areas to display info and content -->
-        <div id="mydiv">
-            <span id="myspan"><br />This demo requires Internet Explorer 11</span>
-        </div>
-        <div id="videoInfo"></div>
-        <div>&nbsp;</div>
-        <div id="curInfo">
-            <h3>Current values:</h3>
-            <ul>
-                <li>Index: <span id="curIndex"></span> of <span id="numIndexes"></span></li>
-                <li>Segment length: <span id="segLength"></span></li>
-                <li>Video time: <span id="curTime"></span></li>
-            </ul>
-        </div>
-    </div>
-    <div id="col2">
-        <video id="myVideo" autoplay="autoplay" >No video available</video>
-        <div id="description">
-            This example uses HTML5 video, Media Source Extensions, and MPEG-DASH files.<br />
-            For more info see <a href="http://go.microsoft.com/fwlink/p/?LinkID=390962">Building a simple MPEG-DASH streaming player</a>.
         </div>
     </div>
 </div>

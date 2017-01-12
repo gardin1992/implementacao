@@ -580,7 +580,7 @@ function _initializeMP4Box(ms) {
 
 }
 
-function load() {
+function load(url) {
 
 	var ms = video.ms;
 	if (ms.readyState !== "open") {
@@ -614,8 +614,7 @@ function load() {
 	);
 	downloader.setInterval(parseInt(chunkTimeoutLabel.value));
 	downloader.setChunkSize(parseInt(chunkSizeLabel.value));
-	console.log(urlInput.value);
-	downloader.setUrl(urlInput.value);
+	downloader.setUrl(url || urlInput.value);
 	loadButton.disabled = true;
 	downloader.start();
 }
