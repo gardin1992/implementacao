@@ -11,8 +11,31 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
-    return view('index');
+
+    $baseDir = 'uploads';
+
+    $iterator = new \RecursiveDirectoryIterator($baseDir);
+    $recursiveIterator = new \RecursiveIteratorIterator($iterator);
+
+    $files = [];
+
+    foreach ( $recursiveIterator as $entry ) {
+
+        if ($entry->getFilename() != "." && $entry->getFilename() != "..") {
+            $files[] = [
+                'url' => $entry->getPath() . '/' . $entry->getFilename(),
+                'name' => $entry->getFilename()
+            ];
+        }
+
+    }
+
+    return view('index', ['files' => $files]);
+
 });
 
 Route::get('user/{id}', 'UserController@show');
